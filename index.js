@@ -4,3 +4,5 @@ async function connect(){
         document.getElementById("connect-button").innerHTML = "Connected"
     }
 }
+
+const{ ethers } = require("ethers");
