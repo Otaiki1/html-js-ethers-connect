@@ -1,0 +1,3 @@
+[submodule "hardhat-simple-storage"]
+	path = hardhat-simple-storage
+	url = git@github.com:Otaiki1/hardhat-simple-storage.git
