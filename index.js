@@ -114,10 +114,25 @@ async function store(){
         }
     }
 }
+async function read(){
+    if(typeof window.ethereum != undefined){
+        const provider = new ethers.providers.Web3Provider(window.ethereum)
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(contractAddress, abi, signer);
+        try{
+            const value = await contract.retrieve();
+            console.log("Retrieved ____---___", value.toString())
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
+}
 
 module.exports = {
     connect,
     contractAddress,
     abi,
-    store
+    store,
+    read
 }
